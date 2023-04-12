@@ -1,0 +1,7 @@
+.vs/*
+.idea/*
+VabucherBack/.vs/*
+VabucherBack/VabucherBack/obj/*
+VabucherBack/VabucherBack/bin/*
+VabucherBack/VabucherBack/VabucherBack.csproj.user
+VabucherBack/VabucherBack/appsettings.json
