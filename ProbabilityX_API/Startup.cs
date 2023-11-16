@@ -1,9 +1,7 @@
 ﻿// Startup.cs
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using ProbabilityX_API.Extensions;
 
 public class Startup
@@ -17,6 +15,25 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
+        services.AddResponseCompression(options =>
+        {
+            options.EnableForHttps = true;
+            options.Providers.Add<BrotliCompressionProvider>();
+            options.Providers.Add<GzipCompressionProvider>();
+        });
+
+        services.AddDbContext<ProbabilityXContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+        services.AddMvc();
+        DependencyInjectionConfig.ConfigureDependencies(services);
+
+        // Configuration Swagger
+        services.AddSwaggerGen(c =>
+        {
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API Name", Version = "v1" });
+        });
+
         // Configurations des services (ajoute tes services ici)
         services.AddApplicationServices();
 
@@ -30,6 +47,13 @@ public class Startup
         if (env.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
+            // Swagger uniquement en mode développement
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API Name V1");
+                c.RoutePrefix = "swagger"; // Endpoint pour accéder à l'interface Swagger
+            });
         }
         else
         {
