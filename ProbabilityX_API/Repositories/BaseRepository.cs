@@ -1,4 +1,4 @@
-﻿using ProbabilityX_API.Extensions;
+﻿using ProbabilityX_API.Settings;
 
 namespace ProbabilityX_API.Repositories
 {

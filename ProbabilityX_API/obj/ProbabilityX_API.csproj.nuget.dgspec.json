@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Florian\\Code\\ProbabilityX\\ProbabilityX_API\\ProbabilityX_API.csproj": {}
+    "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\ProbabilityX_API\\ProbabilityX_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Florian\\Code\\ProbabilityX\\ProbabilityX_API\\ProbabilityX_API.csproj": {
+    "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\ProbabilityX_API\\ProbabilityX_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Florian\\Code\\ProbabilityX\\ProbabilityX_API\\ProbabilityX_API.csproj",
+        "projectUniqueName": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\ProbabilityX_API\\ProbabilityX_API.csproj",
         "projectName": "ProbabilityX_API",
-        "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\ProbabilityX_API\\ProbabilityX_API.csproj",
-        "packagesPath": "C:\\Users\\Florian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\ProbabilityX_API\\obj\\",
+        "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\ProbabilityX_API\\ProbabilityX_API.csproj",
+        "packagesPath": "C:\\Users\\florian.lejosne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\ProbabilityX_API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Florian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\florian.lejosne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -84,6 +89,10 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.AspNetCore.SpaServices": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.14, )"
@@ -132,6 +141,10 @@
               "target": "Package",
               "version": "[2.14.0, )"
             },
+            "Numind.AspNetCore.SpaServices.Extensions": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -160,7 +173,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -2,7 +2,7 @@
 using ProbabilityX_API.Configurations;
 using ProbabilityX_API.Models;
 
-namespace ProbabilityX_API.Extensions
+namespace ProbabilityX_API.Settings
 {
     public partial class ProbabilityXContext : DbContext
     {

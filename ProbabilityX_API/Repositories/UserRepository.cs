@@ -2,19 +2,15 @@
 using ProbabilityX_API.Models;
 using Microsoft.EntityFrameworkCore;
 using ProbabilityX_API.IServices;
-using ProbabilityX_API.Extensions;
+using ProbabilityX_API.Settings;
 
 namespace ProbabilityX_API.Repositories
 {
     public class UserRepository : BaseRepository, IUserRepository
     {
-        private readonly IUserRepository _userRepository;
-        private readonly IUserService _userService;
 
-        public UserRepository(ProbabilityXContext context, IUserService userService, IUserRepository userRepository) : base(context)
+        public UserRepository(ProbabilityXContext context) : base(context)
         {
-            _userRepository = userRepository;
-            _userService = userService;
         }
 
         public async Task<List<User>> GetAllUsers()

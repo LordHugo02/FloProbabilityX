@@ -1,8 +1,12 @@
-﻿// Startup.cs
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using ProbabilityX_API.Extensions;
+using ProbabilityX_API.Settings;
 
 public class Startup
 {
@@ -26,7 +30,6 @@ public class Startup
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
         services.AddMvc();
-        DependencyInjectionConfig.ConfigureDependencies(services);
 
         // Configuration Swagger
         services.AddSwaggerGen(c =>
@@ -35,7 +38,7 @@ public class Startup
         });
 
         // Configurations des services (ajoute tes services ici)
-        services.AddApplicationServices();
+        ProbabilityXDIConfiguration.ConfigureDependencies(services);
 
         // Configuration de l'authentification, des politiques, etc.
 
