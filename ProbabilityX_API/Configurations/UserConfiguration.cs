@@ -13,7 +13,9 @@ namespace ProbabilityX_API.Configurations
 
                 entity.Property(x => x.Id_User)
                     .HasColumnName("id_user")
-                    .HasColumnType("INT UNSIGNED");
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("INT UNSIGNED")
+                    .IsRequired();
 
                 entity.Property(x => x.FirstName)
                     .HasColumnName("firstname")

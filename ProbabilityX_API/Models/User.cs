@@ -1,7 +1,10 @@
-﻿namespace ProbabilityX_API.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ProbabilityX_API.Models
 {
     public class User
     {
+        [Key]
         public int Id_User { get; set; }
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;

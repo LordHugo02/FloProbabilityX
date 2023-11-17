@@ -14,6 +14,11 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+-- Listage de la structure de la base pour probabiltyx_db
+CREATE DATABASE IF NOT EXISTS `probabiltyx_db` /*!40100 DEFAULT CHARACTER SET armscii8 COLLATE armscii8_bin */;
+USE `probabiltyx_db`;
+
 -- Listage de la structure de la table probabiltyx_db. ban
 CREATE TABLE IF NOT EXISTS `ban` (
   `id_ban` int(10) unsigned NOT NULL AUTO_INCREMENT,
