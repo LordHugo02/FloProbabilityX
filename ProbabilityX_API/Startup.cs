@@ -7,14 +7,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using ProbabilityX_API.Settings;
-
+using Microsoft.Extensions.Configuration;
 public class Startup
 {
-    public IConfiguration Configuration { get; }
+    public IConfiguration _Configuration { get; }
 
     public Startup(IConfiguration configuration)
     {
-        Configuration = configuration;
+        _Configuration = configuration;
     }
 
     public void ConfigureServices(IServiceCollection services)
@@ -27,7 +27,12 @@ public class Startup
         });
 
         services.AddDbContext<ProbabilityXContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+    options.UseMySql(
+        _Configuration.GetConnectionString("DefaultConnection"),
+        new MariaDbServerVersion(new Version(10, 3, 29)) // Version de MariaDB/MySQL que vous utilisez
+    )
+);
+
 
         services.AddMvc();
 

@@ -15,14 +15,6 @@ namespace ProbabilityX_API.Settings
 
         public virtual DbSet<User> Users { get; set; } // Utilise le nom au pluriel pour la convention
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer("server=localhost;database=probabilityx_db;user=root;password=root;"); // Ajoute ta chaîne de connexion SQL Server ici
-            }
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.SetUser();

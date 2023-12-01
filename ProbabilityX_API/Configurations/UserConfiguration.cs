@@ -49,7 +49,8 @@ namespace ProbabilityX_API.Configurations
 
                 entity.Property(x => x.PhoneNumber)
                     .HasColumnName("phone_number")
-                    .HasMaxLength(255);
+                    .HasMaxLength(255)
+                    .IsRequired(false);
 
                 entity.Property(x => x.BirthDate)
                     .HasColumnName("birth_date")

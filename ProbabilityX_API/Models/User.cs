@@ -12,7 +12,7 @@ namespace ProbabilityX_API.Models
         public string Password { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
         public int Role { get; set; }
-        public string PhoneNumber { get; set; } = string.Empty;
+        public string? PhoneNumber { get; set; }
         public DateTime BirthDate { get; set; }
         public int Country { get; set; }
         public DateTime CreatedAt { get; set; }
