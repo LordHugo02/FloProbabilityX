@@ -34,7 +34,7 @@ public class Startup
         // Configuration Swagger
         services.AddSwaggerGen(c =>
         {
-            c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API Name", Version = "v1" });
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProbabilityX", Version = "v1" });
         });
 
         // Configurations des services (ajoute tes services ici)
@@ -54,7 +54,7 @@ public class Startup
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API Name V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ProbabilityX");
                 c.RoutePrefix = "swagger"; // Endpoint pour accéder à l'interface Swagger
             });
         }

@@ -19,7 +19,7 @@ namespace ProbabilityX_API.Settings
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=127.0.0.1;Database=probabilityx_db;User Id=root;Password=root;"); // Ajoute ta chaîne de connexion SQL Server ici
+                optionsBuilder.UseSqlServer("server=localhost;database=probabilityx_db;user=root;password=root;"); // Ajoute ta chaîne de connexion SQL Server ici
             }
         }
 
