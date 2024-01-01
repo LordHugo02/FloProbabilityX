@@ -9,7 +9,7 @@ namespace ProbabilityX_API.Configurations
         {
             modelBuilder.Entity<User>(entity =>
             {
-                entity.ToTable("users");
+                entity.ToTable("user");
 
                 entity.Property(x => x.Id_User)
                     .HasColumnName("id_user")
