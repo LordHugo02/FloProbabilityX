@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProbabilityX_API.Models
 {
-    public class FavoriteCompany
+    public class FavoriteCompanyModel
     {
         [Key]
         [Column(Order = 1)]

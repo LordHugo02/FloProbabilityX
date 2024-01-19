@@ -2,7 +2,7 @@
 
 namespace ProbabilityX_API.Models
 {
-    public class Company
+    public class CompanyModel
     {
         [Key]
         public int Id_Company { get; set; }

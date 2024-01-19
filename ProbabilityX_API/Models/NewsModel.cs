@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ProbabilityX_API.Models
 {
-    public class News
+    public class NewsModel
     {
         [Key]
         public int Id_News { get; set; }

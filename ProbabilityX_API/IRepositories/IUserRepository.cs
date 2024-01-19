@@ -4,10 +4,10 @@ namespace ProbabilityX_API.IRepositories
 {
     public interface IUserRepository
     {
-        Task<List<User>> GetAllUsers();
-        Task<User> GetUserById(int userId);
-        Task<int> AddUser(User user);
-        Task UpdateUser(User user);
+        Task<List<UserModel>> GetAllUsers();
+        Task<UserModel> GetUserById(int userId);
+        Task<int> AddUser(UserModel user);
+        Task UpdateUser(UserModel user);
         Task DeleteUser(int userId);
     }
 }

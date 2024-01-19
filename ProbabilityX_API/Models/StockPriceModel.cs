@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ProbabilityX_API.Models
 {
-    public class StockPrice
+    public class StockPriceModel
     {
         [Key]
         public int Id_Stock_Price { get; set; }

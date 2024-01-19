@@ -2,7 +2,7 @@
 
 namespace ProbabilityX_API.Models
 {
-    public class StockType
+    public class StockTypeModel
     {
         [Key]
         public int Id_StockType { get; set; }

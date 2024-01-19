@@ -8,7 +8,7 @@ namespace ProbabilityX_API.Configurations
     {
         public static void SetCompany(this ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Company>(entity =>
+            modelBuilder.Entity<CompanyModel>(entity =>
             {
                 entity.ToTable("company");
 
