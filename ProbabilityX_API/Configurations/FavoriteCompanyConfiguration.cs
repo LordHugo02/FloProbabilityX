@@ -7,7 +7,7 @@ namespace ProbabilityX_API.Configurations
     {
         public static void SetFavoriteCompany(this ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<FavoriteCompany>(entity =>
+            modelBuilder.Entity<FavoriteCompanyModel>(entity =>
             {
                 entity.ToTable("favorites_company");
 

@@ -7,7 +7,7 @@ namespace ProbabilityX_API.Configurations
     {
         public static void SetNews(this ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<News>(entity =>
+            modelBuilder.Entity<NewsModel>(entity =>
             {
                 entity.ToTable("news");
 

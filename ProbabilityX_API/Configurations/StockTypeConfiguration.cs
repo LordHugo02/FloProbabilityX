@@ -7,7 +7,7 @@ namespace ProbabilityX_API.Configurations
     {
         public static void SetStockType(this ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<StockType>(entity =>
+            modelBuilder.Entity<StockTypeModel>(entity =>
             {
                 entity.ToTable("stock_type");
 

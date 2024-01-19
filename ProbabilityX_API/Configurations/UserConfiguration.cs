@@ -7,7 +7,7 @@ namespace ProbabilityX_API.Configurations
     {
         public static void SetUser(this ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>(entity =>
+            modelBuilder.Entity<UserModel>(entity =>
             {
                 entity.ToTable("user");
 

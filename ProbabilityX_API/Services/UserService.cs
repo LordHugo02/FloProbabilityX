@@ -14,23 +14,23 @@ namespace ProbabilityX_API.Services
             _userRepository = userRepository;
         }
 
-        public async Task<List<User>> GetAllUsers()
+        public async Task<List<UserModel>> GetAllUsers()
         {
             return await _userRepository.GetAllUsers();
         }
 
-        public async Task<User> GetUserById(int userId)
+        public async Task<UserModel> GetUserById(int userId)
         {
             return await _userRepository.GetUserById(userId);
         }
 
-        public async Task<int> AddUser(User user)
+        public async Task<int> AddUser(UserModel user)
         {
             // Tu peux ajouter ici des règles métier ou de validation avant d'ajouter l'utilisateur
             return await _userRepository.AddUser(user);
         }
 
-        public async Task UpdateUser(User user)
+        public async Task UpdateUser(UserModel user)
         {
             // Tu peux ajouter ici des règles métier ou de validation avant de mettre à jour l'utilisateur
             await _userRepository.UpdateUser(user);

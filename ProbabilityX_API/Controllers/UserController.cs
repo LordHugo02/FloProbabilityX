@@ -34,14 +34,14 @@ namespace ProbabilityX_API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddUser([FromBody] User user)
+        public async Task<IActionResult> AddUser([FromBody] UserModel user)
         {
             var userId = await _userService.AddUser(user);
             return CreatedAtAction(nameof(GetUserById), new { id = userId }, user);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateUser(int id, [FromBody] User user)
+        public async Task<IActionResult> UpdateUser(int id, [FromBody] UserModel user)
         {
             if (id != user.Id_User)
             {
