@@ -23,6 +23,7 @@ namespace ProbabilityX_API.Settings
         public virtual DbSet<StockPriceModel> MonthStockPrices { get; set; }
         public virtual DbSet<NewsModel> News { get; set; }
         public virtual DbSet<StockTypeModel> StockTypes { get; set; }
+        public virtual DbSet<EarningCalendarModel> EarningsCalendar { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -35,6 +36,7 @@ namespace ProbabilityX_API.Settings
             modelBuilder.SetMonthStockPrice();
             modelBuilder.SetNews();
             modelBuilder.SetStockType();
+            modelBuilder.SetEarningCalendar();
         }
     }
 }

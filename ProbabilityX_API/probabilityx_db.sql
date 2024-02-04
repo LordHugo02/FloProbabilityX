@@ -45,19 +45,36 @@ CREATE TABLE IF NOT EXISTS `company` (
 
 -- Listage de la structure de table probabilityx_db. day_stock_price
 CREATE TABLE IF NOT EXISTS `day_stock_price` (
-  `id_day_stock` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id_stock_price` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `id_company` int(11) unsigned NOT NULL,
-  `day_date` timestamp NOT NULL,
+  `date_price` timestamp NOT NULL,
   `open_price` decimal(10,2) unsigned NOT NULL,
   `close_price` decimal(10,2) unsigned NOT NULL,
   `high_price` decimal(10,2) unsigned NOT NULL,
   `low_price` decimal(10,2) unsigned NOT NULL,
-  PRIMARY KEY (`id_day_stock`),
+  PRIMARY KEY (`id_stock_price`) USING BTREE,
   KEY `fk_day_stock_price_company` (`id_company`),
   CONSTRAINT `fk_day_stock_price_company` FOREIGN KEY (`id_company`) REFERENCES `company` (`id_company`)
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
 -- Listage des données de la table probabilityx_db.day_stock_price : ~0 rows (environ)
+
+-- Listage de la structure de table probabilityx_db. earnings_calendar
+CREATE TABLE IF NOT EXISTS `earnings_calendar` (
+  `id_earning` int(10) unsigned zerofill NOT NULL AUTO_INCREMENT,
+  `id_company` int(10) unsigned NOT NULL,
+  `benefice_per_action` float unsigned DEFAULT NULL,
+  `forecast_benefice_per_action` float unsigned DEFAULT NULL,
+  `revenue` varchar(15) DEFAULT NULL,
+  `forecast_revenue` varchar(15) DEFAULT NULL,
+  `result_date` date DEFAULT NULL,
+  `result_time` time DEFAULT NULL,
+  PRIMARY KEY (`id_earning`),
+  KEY `FK_earnings_calendar_company` (`id_company`),
+  CONSTRAINT `FK_earnings_calendar_company` FOREIGN KEY (`id_company`) REFERENCES `company` (`id_company`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- Listage des données de la table probabilityx_db.earnings_calendar : ~0 rows (environ)
 
 -- Listage de la structure de table probabilityx_db. favorites_company
 CREATE TABLE IF NOT EXISTS `favorites_company` (
@@ -115,14 +132,14 @@ CREATE TABLE IF NOT EXISTS `financial_type_indicator` (
 
 -- Listage de la structure de table probabilityx_db. hour_stock_price
 CREATE TABLE IF NOT EXISTS `hour_stock_price` (
-  `id_hour_stock` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id_stock_price` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `id_company` int(11) unsigned NOT NULL,
-  `hour_date` timestamp NOT NULL,
+  `date_price` timestamp NOT NULL,
   `open_price` decimal(10,2) unsigned NOT NULL,
   `close_price` decimal(10,2) unsigned NOT NULL,
   `high_price` decimal(10,2) unsigned NOT NULL,
   `low_price` decimal(10,2) unsigned NOT NULL,
-  PRIMARY KEY (`id_hour_stock`),
+  PRIMARY KEY (`id_stock_price`) USING BTREE,
   KEY `fk_hour_stock_price_company` (`id_company`),
   CONSTRAINT `fk_hour_stock_price_company` FOREIGN KEY (`id_company`) REFERENCES `company` (`id_company`)
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
@@ -140,14 +157,14 @@ CREATE TABLE IF NOT EXISTS `language` (
 
 -- Listage de la structure de table probabilityx_db. minute_stock_price
 CREATE TABLE IF NOT EXISTS `minute_stock_price` (
-  `id_minute_stock` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id_stock_price` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `id_company` int(11) unsigned NOT NULL,
-  `minute_date` timestamp NOT NULL,
+  `date_price` timestamp NOT NULL,
   `open_price` decimal(10,2) unsigned NOT NULL,
   `close_price` decimal(10,2) unsigned NOT NULL,
   `high_price` decimal(10,2) unsigned NOT NULL,
   `low_price` decimal(10,2) unsigned NOT NULL,
-  PRIMARY KEY (`id_minute_stock`),
+  PRIMARY KEY (`id_stock_price`) USING BTREE,
   KEY `fk_minute_stock_price_company` (`id_company`),
   CONSTRAINT `fk_minute_stock_price_company` FOREIGN KEY (`id_company`) REFERENCES `company` (`id_company`)
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
@@ -156,14 +173,14 @@ CREATE TABLE IF NOT EXISTS `minute_stock_price` (
 
 -- Listage de la structure de table probabilityx_db. month_stock_price
 CREATE TABLE IF NOT EXISTS `month_stock_price` (
-  `id_month_stock` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id_stock_price` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `id_company` int(11) unsigned NOT NULL,
-  `month_date` timestamp NOT NULL,
+  `date_price` timestamp NOT NULL,
   `open_price` decimal(10,2) unsigned NOT NULL,
   `close_price` decimal(10,2) unsigned NOT NULL,
   `high_price` decimal(10,2) unsigned NOT NULL,
   `low_price` decimal(10,2) unsigned NOT NULL,
-  PRIMARY KEY (`id_month_stock`),
+  PRIMARY KEY (`id_stock_price`) USING BTREE,
   KEY `fk_month_stock_price_company` (`id_company`),
   CONSTRAINT `fk_month_stock_price_company` FOREIGN KEY (`id_company`) REFERENCES `company` (`id_company`)
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
@@ -229,14 +246,14 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 -- Listage de la structure de table probabilityx_db. week_stock_price
 CREATE TABLE IF NOT EXISTS `week_stock_price` (
-  `id_week_stock` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id_stock_price` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `id_company` int(11) unsigned NOT NULL,
-  `week_date` timestamp NOT NULL,
+  `date_price` timestamp NOT NULL,
   `open_price` decimal(10,2) unsigned NOT NULL,
   `close_price` decimal(10,2) unsigned NOT NULL,
   `high_price` decimal(10,2) unsigned NOT NULL,
   `low_price` decimal(10,2) unsigned NOT NULL,
-  PRIMARY KEY (`id_week_stock`),
+  PRIMARY KEY (`id_stock_price`) USING BTREE,
   KEY `fk_week_stock_price_company` (`id_company`),
   CONSTRAINT `fk_week_stock_price_company` FOREIGN KEY (`id_company`) REFERENCES `company` (`id_company`)
 ) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
