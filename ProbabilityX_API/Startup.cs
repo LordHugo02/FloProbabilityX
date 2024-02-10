@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using ProbabilityX_API.Settings;
+using ProbabilityX_API.HostedServices;
+
 public class Startup
 {
     public IConfiguration _Configuration { get; }
@@ -35,7 +37,7 @@ public class Startup
         {
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProbabilityX", Version = "v1" });
         });
-
+        services.AddHostedService<GetNextWeekEarningCalendarHostedService>();
         // Configurations des services (ajoute tes services ici)
         ProbabilityXDIConfiguration.ConfigureDependencies(services);
 

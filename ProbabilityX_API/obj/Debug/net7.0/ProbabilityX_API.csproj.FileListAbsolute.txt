@@ -244,3 +244,8 @@ C:\Users\Florian\Code\ProbabilityX\ProbabilityX_API\bin\Debug\net7.0\Microsoft.A
 C:\Users\Florian\Code\ProbabilityX\ProbabilityX_API\bin\Debug\net7.0\Microsoft.AspNetCore.SpaServices.Extensions.dll
 C:\Users\Florian\Code\ProbabilityX\ProbabilityX_API\bin\Debug\net7.0\Numind.AspNetCore.SpaServices.Extensions.dll
 C:\Users\Florian\Code\ProbabilityX\ProbabilityX_API\bin\Debug\net7.0\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Users\Florian\Code\ProbabilityX\ProbabilityX_API\bin\Debug\net7.0\selenium-manager\linux\selenium-manager
+C:\Users\Florian\Code\ProbabilityX\ProbabilityX_API\bin\Debug\net7.0\selenium-manager\macos\selenium-manager
+C:\Users\Florian\Code\ProbabilityX\ProbabilityX_API\bin\Debug\net7.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\Florian\Code\ProbabilityX\ProbabilityX_API\bin\Debug\net7.0\WebDriver.dll
+C:\Users\Florian\Code\ProbabilityX\ProbabilityX_API\bin\Debug\net7.0\SeleniumExtras.WaitHelpers.dll

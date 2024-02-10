@@ -11,6 +11,7 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "BCrypt.Net-Next": "4.0.3",
+          "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
           "Microsoft.AspNetCore.Authorization": "8.0.0",
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Mvc": "2.2.0",
@@ -34,6 +35,8 @@
           "NuGet.Core": "2.14.0",
           "Numind.AspNetCore.SpaServices.Extensions": "1.0.1",
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
+          "Selenium.WebDriver": "4.17.0",
+          "Selenium.WebDriver.ChromeDriver": "121.0.6167.8500",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -102,6 +105,17 @@
           "lib/net6.0/BCrypt.Net-Next.dll": {
             "assemblyVersion": "4.0.3.0",
             "fileVersion": "4.0.3.0"
+          }
+        }
+      },
+      "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.17.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SeleniumExtras.WaitHelpers.dll": {
+            "assemblyVersion": "3.11.0.0",
+            "fileVersion": "3.11.0.0"
           }
         }
       },
@@ -1386,6 +1400,18 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "Selenium.WebDriver/4.17.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "Selenium.WebDriver.ChromeDriver/121.0.6167.8500": {},
       "Swashbuckle.AspNetCore/6.4.0": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
@@ -2266,6 +2292,13 @@
       "sha512": "sha512-W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
       "path": "bcrypt.net-next/4.0.3",
       "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
+    },
+    "DotNetSeleniumExtras.WaitHelpers/3.11.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xc6jVVl5ymgk3ZNWnC/KHxkEup1QpnwYbrwF+NQoCOGERsD8YMlLwmsX4lGhLXCLo/YQTRTIwlKCN9E/doGUNg==",
+      "path": "dotnetseleniumextras.waithelpers/3.11.0",
+      "hashPath": "dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Antiforgery/2.2.0": {
       "type": "package",
@@ -3253,6 +3286,20 @@
       "sha512": "sha512-VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver/4.17.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wHwWPvQkgZv+k24pncPZswRdSF4AhF2bFVoF7MrY4Xw122j9L89TNGZUvdjdmscPk2XGpRK1fFQODOKopibQEw==",
+      "path": "selenium.webdriver/4.17.0",
+      "hashPath": "selenium.webdriver.4.17.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver.ChromeDriver/121.0.6167.8500": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vGSkTin9LkYpkG5DbTVF78tI2p4Tchw+gnzTxA6JpwLKvaf5mJrNd5TgpfpsMNg5DuI5jsc2oW0ZhrA86wY6fw==",
+      "path": "selenium.webdriver.chromedriver/121.0.6167.8500",
+      "hashPath": "selenium.webdriver.chromedriver.121.0.6167.8500.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.4.0": {
       "type": "package",

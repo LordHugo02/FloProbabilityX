@@ -12,6 +12,12 @@ public static class ProbabilityXDIConfiguration
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IUserRepository, UserRepository>();
 
+        services.AddScoped<ICompanyService, CompanyService>();
+        services.AddScoped<ICompanyRepository, CompanyRepository>();
+        
+        services.AddScoped<IEarningCalendarService, EarningCalendarService>();
+        services.AddScoped<IEarningCalendarRepository, EarningCalendarRepository>();
+
         // Ajoute d'autres injections de dépendances au besoin
     }
 }
