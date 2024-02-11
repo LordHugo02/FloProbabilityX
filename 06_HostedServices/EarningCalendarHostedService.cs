@@ -5,9 +5,9 @@ using System;
 
 namespace ProbabilityX_API.HostedServices
 {
-    public class GetNextWeekEarningCalendarHostedService : BaseHostedService
+    public class ScrapperNextWeekEarningCalendarHostedService : BaseHostedService
     {
-        public GetNextWeekEarningCalendarHostedService(IServiceProvider services)
+        public ScrapperNextWeekEarningCalendarHostedService(IServiceProvider services)
             : base(services)
         {
             StartInSeconds = 0; // démarrage au lancement
@@ -19,7 +19,7 @@ namespace ProbabilityX_API.HostedServices
             using (var scope = Services.CreateScope())
             {
                 var updateStatuesService = scope.ServiceProvider.GetRequiredService<IEarningCalendarService>();
-                updateStatuesService.GetNextWeekEarningCalendar();
+                updateStatuesService.ScrapperNextWeekEarningCalendar();
             }
         }
     }

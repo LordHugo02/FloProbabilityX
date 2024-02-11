@@ -7,6 +7,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using Microsoft.Extensions.Options;
 using Microsoft.CodeAnalysis.Text;
+using System.Xml.Linq;
 
 namespace ProbabilityX_API.Services
 {
@@ -19,7 +20,7 @@ namespace ProbabilityX_API.Services
             _earningcalendarRepository = earningcalendarRepository;
         }
 
-        public async Task<List<EarningCalendarModel>> GetNextWeekEarningCalendar()
+        public async Task<List<EarningCalendarModel>> ScrapperNextWeekEarningCalendar()
         {
             var chromeOptions = new ChromeOptions();
             //chromeOptions.AddArgument("--headless"); // Run Chrome in headless mode (without UI)
@@ -47,7 +48,9 @@ namespace ProbabilityX_API.Services
                     js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
                     await Task.Delay(2000);
                 }
-
+                var companyNames = driver.FindElements(By.ClassName("earnCalCompanyName"));
+                var companyTags = driver.FindElements(By.CssSelector(".bold.middle"));
+                var epsElements = driver.FindElements(By.CssSelector("[class*='eps_actual']"));
                 var links = driver.FindElements(By.CssSelector("a.bold.middle"));
 
                 foreach (var link in links)
@@ -69,9 +72,45 @@ namespace ProbabilityX_API.Services
                     try
                     {
                         // Récupérez la donnée souhaitée ici
-                        var yourDataElement = driver.FindElement(By.Id("yourDataElementId"));
-                        string yourData = yourDataElement.Text;
+                        var fullName = driver.FindElement(By.CssSelector("[itemprop='name']"));
+                        var market = driver.FindElement(By.ClassName("btnTextDropDwn"));
+                        string yourData = fullName.Text;
                         Console.WriteLine($"Donnée récupérée : {yourData}");
+                        // Boucle tant que le bouton "Voir plus" est présent
+                        while (IsElementVisible(driver, By.CssSelector("#showMoreEarningsHistory")))
+                        {
+                            // Cliquer sur le bouton "Voir plus"
+                            IWebElement voirPlusButton = driver.FindElement(By.CssSelector("#showMoreEarningsHistory"));
+                            voirPlusButton.Click();
+
+                            // Attendre un court instant (peut être ajusté selon vos besoins)
+                            Thread.Sleep(1000);
+                        }
+                        var instrumentEarningsHistory = driver.FindElements(By.CssSelector("tr[name='instrumentEarningsHistory']"));
+                        Console.WriteLine($"Nombre d'historique : { instrumentEarningsHistory.Count()}");
+                        foreach (var historyData in instrumentEarningsHistory)
+                        {
+                            var tds = historyData.FindElements(By.CssSelector("td"));
+
+                            // Assurez-vous que vous avez au moins le nombre attendu de cellules
+                            if (tds.Count == 6)
+                            {
+                                // Récupérer les données de chaque cellule
+                                var dateOut = tds[0].Text;
+                                var periodDate = tds[1].Text;
+                                var bpa = tds[2].Text;
+                                var bpaPrev = tds[3].Text;
+                                var performance = tds[4].Text;
+                                var performancePrev = tds[5].Text;
+
+                                // Imprimer les données récupérées dans la console
+                                Console.WriteLine($"Date: {dateOut}, Period Date: {periodDate}, BPA: {bpa}, BPA Previous: {bpaPrev}, Performance: {performance}, Performance Previous: {performancePrev}");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Le nombre de cellules n'est pas celui attendu.");
+                            }
+                        }
                     }
                     catch (NoSuchElementException)
                     {
@@ -86,33 +125,6 @@ namespace ProbabilityX_API.Services
                         driver.SwitchTo().Window(principalHandle);
                     }
                 }
-
-                //// Attendre un moment pour permettre le chargement des dates supplémentaires
-                //var dateElements = driver.FindElements(By.ClassName("theDay"));
-                //Console.WriteLine(dateElements.Count);
-                //var companyNames = driver.FindElements(By.ClassName("earnCalCompanyName"));
-                //Console.WriteLine(companyNames.Count);
-                //var companyTags = driver.FindElements(By.CssSelector(".bold.middle"));
-                //Console.WriteLine(companyTags.Count);
-                //var epsElements = driver.FindElements(By.CssSelector("[class*='eps_actual']"));
-                //Console.WriteLine(epsElements.Count);
-
-                //string filePath = "fichier.txt";
-
-                //// Utilisez StreamWriter pour écrire dans le fichier
-                //using (StreamWriter sw = new StreamWriter(filePath))
-                //{
-                //    for (int i = 0; i < companyNames.Count; i++)
-                //    {
-                //        string companyNameText = companyNames[i].Text;
-                //        string companyTagText = companyTags[i].Text;
-                //        string epsText = epsElements[i].Text;
-
-                //        // Écrire les données dans le fichier
-                //        sw.WriteLine($"Company Name: {companyNameText}, Company Tag: {companyTagText}, EPS: {epsText}");
-                //    }
-                //}
-
             }
             catch (Exception ex)
             {
@@ -128,7 +140,19 @@ namespace ProbabilityX_API.Services
 
             return null;
         }
-
+        // Méthode pour vérifier la visibilité d'un élément (style != 'none')
+        static bool IsElementVisible(IWebDriver driver, By by)
+        {
+            try
+            {
+                IWebElement element = driver.FindElement(by);
+                return element.Displayed && element.GetAttribute("style") != "display: none;";
+            }
+            catch (NoSuchElementException)
+            {
+                return false;
+            }
+        }
         // Fonction pour attendre qu'un élément soit visible
         IWebElement WaitUntilElementIsVisibleWithRetry(IWebDriver driver, By by, TimeSpan timeout, TimeSpan retryInterval)
         {
