@@ -38,7 +38,7 @@ public class Startup
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProbabilityX", Version = "v1" });
         });
         services.AddHostedService<ScrapperNextWeekEarningCalendarHostedService>();
-        // Configurations des services (ajoute tes services ici)
+        // Configurations des services (ajoute tes services ici)*
         ProbabilityXDIConfiguration.ConfigureDependencies(services);
 
         // Configuration de l'authentification, des politiques, etc.

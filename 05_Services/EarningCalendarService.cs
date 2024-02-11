@@ -14,10 +14,12 @@ namespace ProbabilityX_API.Services
     public class EarningCalendarService : IEarningCalendarService
     {
         private readonly IEarningCalendarRepository _earningcalendarRepository;
+        private readonly ICompanyService _companyService;
 
-        public EarningCalendarService(IEarningCalendarRepository earningcalendarRepository)
+        public EarningCalendarService(IEarningCalendarRepository earningcalendarRepository, ICompanyService companyService)
         {
             _earningcalendarRepository = earningcalendarRepository;
+            _companyService = companyService;
         }
 
         public async Task<List<EarningCalendarModel>> ScrapperNextWeekEarningCalendar()
@@ -52,77 +54,92 @@ namespace ProbabilityX_API.Services
                 var companyTags = driver.FindElements(By.CssSelector(".bold.middle"));
                 var epsElements = driver.FindElements(By.CssSelector("[class*='eps_actual']"));
                 var links = driver.FindElements(By.CssSelector("a.bold.middle"));
-
+                if(companyNames.Count() == links.Count())
+                {
+                    Console.WriteLine("All Good");
+                }
                 foreach (var link in links)
                 {
+                    int index = links.IndexOf(link);
+                    var newCompany = new CompanyModel
+                    {
+                        CompanyName = companyNames[index].Text,
+                        StockSymbol = companyTags[index].Text,
+                        Id_StockType = 1 // Remplacez la valeur par l'ID approprié du type de stock
+                    };
+
+                    var isCompanyAdded = _companyService.AddCompany(newCompany).Result;
+
                     var principalHandle = driver.CurrentWindowHandle;
-
-                    // Utiliser JavaScript pour cliquer sur le lien
-                    IJavaScriptExecutor executor = (IJavaScriptExecutor)driver;
-                    executor.ExecuteScript("arguments[0].click();", link);
-
-                    // Attendez que la nouvelle fenêtre soit disponible
-                    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(3));
-                    wait.Until(driver => driver.WindowHandles.Count > 1);
-
-                    // Basculer vers la nouvelle fenêtre
-                    var newHandle = driver.WindowHandles.Except(new List<string> { principalHandle }).Single();
-                    driver.SwitchTo().Window(newHandle);
-
-                    try
+                    if (isCompanyAdded != null)
                     {
-                        // Récupérez la donnée souhaitée ici
-                        var fullName = driver.FindElement(By.CssSelector("[itemprop='name']"));
-                        var market = driver.FindElement(By.ClassName("btnTextDropDwn"));
-                        string yourData = fullName.Text;
-                        Console.WriteLine($"Donnée récupérée : {yourData}");
-                        // Boucle tant que le bouton "Voir plus" est présent
-                        while (IsElementVisible(driver, By.CssSelector("#showMoreEarningsHistory")))
+                        // Utiliser JavaScript pour cliquer sur le lien
+                        IJavaScriptExecutor executor = (IJavaScriptExecutor)driver;
+                        executor.ExecuteScript("arguments[0].click();", link);
+
+                        // Attendez que la nouvelle fenêtre soit disponible
+                        WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(3));
+                        wait.Until(driver => driver.WindowHandles.Count > 1);
+
+                        // Basculer vers la nouvelle fenêtre
+                        var newHandle = driver.WindowHandles.Except(new List<string> { principalHandle }).Single();
+                        driver.SwitchTo().Window(newHandle);
+
+                        try
                         {
-                            // Cliquer sur le bouton "Voir plus"
-                            IWebElement voirPlusButton = driver.FindElement(By.CssSelector("#showMoreEarningsHistory"));
-                            voirPlusButton.Click();
+                            // Récupérez la donnée souhaitée ici
+                            var fullName = driver.FindElement(By.CssSelector("[itemprop='name']"));
+                            var market = driver.FindElement(By.ClassName("btnTextDropDwn"));
+                            string yourData = fullName.Text;
+                            Console.WriteLine($"Donnée récupérée : {yourData}");
+                            // Boucle tant que le bouton "Voir plus" est présent
+                            while (IsElementVisible(driver, By.CssSelector("#showMoreEarningsHistory")))
+                            {
+                                // Cliquer sur le bouton "Voir plus"
+                                IWebElement voirPlusButton = driver.FindElement(By.CssSelector("#showMoreEarningsHistory"));
+                                voirPlusButton.Click();
 
-                            // Attendre un court instant (peut être ajusté selon vos besoins)
-                            Thread.Sleep(1000);
+                                // Attendre un court instant (peut être ajusté selon vos besoins)
+                                Thread.Sleep(1000);
+                            }
+                            var instrumentEarningsHistory = driver.FindElements(By.CssSelector("tr[name='instrumentEarningsHistory']"));
+                            Console.WriteLine($"Nombre d'historique : {instrumentEarningsHistory.Count()}");
+                            foreach (var historyData in instrumentEarningsHistory)
+                            {
+                                var tds = historyData.FindElements(By.CssSelector("td"));
+
+                                // Assurez-vous que vous avez au moins le nombre attendu de cellules
+                                if (tds.Count == 6)
+                                {
+                                    // Récupérer les données de chaque cellule
+                                    var dateOut = tds[0].Text;
+                                    var periodDate = tds[1].Text;
+                                    var bpa = tds[2].Text;
+                                    var bpaPrev = tds[3].Text;
+                                    var performance = tds[4].Text;
+                                    var performancePrev = tds[5].Text;
+
+                                    // Imprimer les données récupérées dans la console
+                                    Console.WriteLine($"Company: {isCompanyAdded.CompanyName} vs RealName: {fullName} Date: {dateOut}, Period Date: {periodDate}, BPA: {bpa}, BPA Previous: {bpaPrev}, Performance: {performance}, Performance Previous: {performancePrev}");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Le nombre de cellules n'est pas celui attendu.");
+                                }
+                            }
                         }
-                        var instrumentEarningsHistory = driver.FindElements(By.CssSelector("tr[name='instrumentEarningsHistory']"));
-                        Console.WriteLine($"Nombre d'historique : { instrumentEarningsHistory.Count()}");
-                        foreach (var historyData in instrumentEarningsHistory)
+                        catch (NoSuchElementException)
                         {
-                            var tds = historyData.FindElements(By.CssSelector("td"));
-
-                            // Assurez-vous que vous avez au moins le nombre attendu de cellules
-                            if (tds.Count == 6)
-                            {
-                                // Récupérer les données de chaque cellule
-                                var dateOut = tds[0].Text;
-                                var periodDate = tds[1].Text;
-                                var bpa = tds[2].Text;
-                                var bpaPrev = tds[3].Text;
-                                var performance = tds[4].Text;
-                                var performancePrev = tds[5].Text;
-
-                                // Imprimer les données récupérées dans la console
-                                Console.WriteLine($"Date: {dateOut}, Period Date: {periodDate}, BPA: {bpa}, BPA Previous: {bpaPrev}, Performance: {performance}, Performance Previous: {performancePrev}");
-                            }
-                            else
-                            {
-                                Console.WriteLine("Le nombre de cellules n'est pas celui attendu.");
-                            }
+                            Console.WriteLine("L'élément n'a pas été trouvé.");
                         }
-                    }
-                    catch (NoSuchElementException)
-                    {
-                        Console.WriteLine("L'élément n'a pas été trouvé.");
-                    }
-                    finally
-                    {
-                        // Fermez la nouvelle fenêtre
-                        driver.Close();
+                        finally
+                        {
+                            // Fermez la nouvelle fenêtre
+                            driver.Close();
 
-                        // Revenez à la fenêtre principale
-                        driver.SwitchTo().Window(principalHandle);
+                            // Revenez à la fenêtre principale
+                            driver.SwitchTo().Window(principalHandle);
+                        }
                     }
                 }
             }
@@ -135,11 +152,14 @@ namespace ProbabilityX_API.Services
             finally
             {
                 // Close the WebDriver
-                //driver.Quit();
+                driver.Quit();
             }
 
             return null;
         }
+
+
+
         // Méthode pour vérifier la visibilité d'un élément (style != 'none')
         static bool IsElementVisible(IWebDriver driver, By by)
         {

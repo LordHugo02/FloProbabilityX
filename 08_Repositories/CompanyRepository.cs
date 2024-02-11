@@ -24,14 +24,15 @@ namespace ProbabilityX_API.Repositories
 
         public async Task<CompanyModel> GetCompanyByName(string companyName)
         {
-            // Implement GetCompanyById using the context
-            throw new NotImplementedException();
+            var company = await _context.Companies.FirstOrDefaultAsync(c => c.CompanyName == companyName);
+            return company;
         }
 
         public async Task<CompanyModel> AddCompany(CompanyModel company)
         {
-            // Implement AddCompany using the context
-            throw new NotImplementedException();
+            _context.Companies.Add(company);
+            await _context.SaveChangesAsync();
+            return company;
         }
 
         public async Task<CompanyModel> UpdateCompany(CompanyModel company)

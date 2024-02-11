@@ -32,9 +32,23 @@ namespace ProbabilityX_API.Services
 
         public async Task<CompanyModel> AddCompany(CompanyModel company)
         {
-            return await _companyRepository.AddCompany(company);
+            // Vérifier si l'entreprise existe déjà par son nom
+            var existingCompany = await GetCompanyByName(company.CompanyName);
 
+            if (existingCompany == null)
+            {
+                // L'entreprise n'existe pas encore, vous pouvez l'ajouter
+                return await _companyRepository.AddCompany(company);
+            }
+            else
+            {
+                // L'entreprise existe déjà, vous pouvez prendre des mesures appropriées
+                Console.WriteLine("L'entreprise existe déjà dans la base de données.");
+                // Vous pouvez choisir de ne pas ajouter la nouvelle entreprise ou prendre d'autres mesures nécessaires
+                return null; // Indiquer que l'ajout n'a pas été effectué en raison de la duplication
+            }
         }
+
 
         public async Task<CompanyModel> UpdateCompany(CompanyModel company)
         {
