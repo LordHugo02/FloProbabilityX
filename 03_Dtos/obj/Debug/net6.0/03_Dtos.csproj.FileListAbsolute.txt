@@ -1,0 +1,15 @@
+C:\Users\Florian\Code\ProbabilityX\03_Dtos\bin\Debug\net6.0\selenium-manager\linux\selenium-manager
+C:\Users\Florian\Code\ProbabilityX\03_Dtos\bin\Debug\net6.0\selenium-manager\macos\selenium-manager
+C:\Users\Florian\Code\ProbabilityX\03_Dtos\bin\Debug\net6.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\Florian\Code\ProbabilityX\03_Dtos\bin\Debug\net6.0\03_Dtos.deps.json
+C:\Users\Florian\Code\ProbabilityX\03_Dtos\bin\Debug\net6.0\03_Dtos.dll
+C:\Users\Florian\Code\ProbabilityX\03_Dtos\bin\Debug\net6.0\03_Dtos.pdb
+C:\Users\Florian\Code\ProbabilityX\03_Dtos\obj\Debug\net6.0\03_Dtos.csproj.AssemblyReference.cache
+C:\Users\Florian\Code\ProbabilityX\03_Dtos\obj\Debug\net6.0\03_Dtos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Florian\Code\ProbabilityX\03_Dtos\obj\Debug\net6.0\03_Dtos.AssemblyInfoInputs.cache
+C:\Users\Florian\Code\ProbabilityX\03_Dtos\obj\Debug\net6.0\03_Dtos.AssemblyInfo.cs
+C:\Users\Florian\Code\ProbabilityX\03_Dtos\obj\Debug\net6.0\03_Dtos.csproj.CoreCompileInputs.cache
+C:\Users\Florian\Code\ProbabilityX\03_Dtos\obj\Debug\net6.0\03_Dtos.dll
+C:\Users\Florian\Code\ProbabilityX\03_Dtos\obj\Debug\net6.0\refint\03_Dtos.dll
+C:\Users\Florian\Code\ProbabilityX\03_Dtos\obj\Debug\net6.0\03_Dtos.pdb
+C:\Users\Florian\Code\ProbabilityX\03_Dtos\obj\Debug\net6.0\ref\03_Dtos.dll

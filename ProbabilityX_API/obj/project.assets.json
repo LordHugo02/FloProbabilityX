@@ -4471,6 +4471,399 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "01_Configurations/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "02_Models": "1.0.0",
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "BCrypt.Net-Next": "4.0.3",
+          "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
+          "Microsoft.AspNetCore.Authorization": "8.0.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
+          "Microsoft.AspNetCore.OpenApi": "7.0.2",
+          "Microsoft.AspNetCore.Razor.Design": "2.2.0",
+          "Microsoft.AspNetCore.SpaServices": "3.1.32",
+          "Microsoft.EntityFrameworkCore": "7.0.14",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14",
+          "Microsoft.Extensions.Configuration": "8.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Configuration.Json": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Hosting": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "Microsoft.Extensions.Logging.Console": "8.0.0",
+          "Microsoft.NETCore.App": "2.2.8",
+          "Newtonsoft.Json": "13.0.3",
+          "NuGet.Core": "2.14.0",
+          "Numind.AspNetCore.SpaServices.Extensions": "1.0.1",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
+          "Selenium.WebDriver": "4.17.0",
+          "Selenium.WebDriver.ChromeDriver": "121.0.6167.8500",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "compile": {
+          "bin/placeholder/01_Configurations.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/01_Configurations.dll": {}
+        }
+      },
+      "02_Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "BCrypt.Net-Next": "4.0.3",
+          "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
+          "Microsoft.AspNetCore.Authorization": "8.0.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
+          "Microsoft.AspNetCore.OpenApi": "7.0.2",
+          "Microsoft.AspNetCore.Razor.Design": "2.2.0",
+          "Microsoft.AspNetCore.SpaServices": "3.1.32",
+          "Microsoft.EntityFrameworkCore": "7.0.14",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14",
+          "Microsoft.Extensions.Configuration": "8.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Configuration.Json": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Hosting": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "Microsoft.Extensions.Logging.Console": "8.0.0",
+          "Microsoft.NETCore.App": "2.2.8",
+          "Newtonsoft.Json": "13.0.3",
+          "NuGet.Core": "2.14.0",
+          "Numind.AspNetCore.SpaServices.Extensions": "1.0.1",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
+          "Selenium.WebDriver": "4.17.0",
+          "Selenium.WebDriver.ChromeDriver": "121.0.6167.8500",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "compile": {
+          "bin/placeholder/02_Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/02_Models.dll": {}
+        }
+      },
+      "04_IServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "02_Models": "1.0.0",
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "BCrypt.Net-Next": "4.0.3",
+          "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
+          "Microsoft.AspNetCore.Authorization": "8.0.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
+          "Microsoft.AspNetCore.OpenApi": "7.0.2",
+          "Microsoft.AspNetCore.Razor.Design": "2.2.0",
+          "Microsoft.AspNetCore.SpaServices": "3.1.32",
+          "Microsoft.EntityFrameworkCore": "7.0.14",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14",
+          "Microsoft.Extensions.Configuration": "8.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Configuration.Json": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Hosting": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "Microsoft.Extensions.Logging.Console": "8.0.0",
+          "Microsoft.NETCore.App": "2.2.8",
+          "Newtonsoft.Json": "13.0.3",
+          "NuGet.Core": "2.14.0",
+          "Numind.AspNetCore.SpaServices.Extensions": "1.0.1",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
+          "Selenium.WebDriver": "4.17.0",
+          "Selenium.WebDriver.ChromeDriver": "121.0.6167.8500",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "compile": {
+          "bin/placeholder/04_IServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/04_IServices.dll": {}
+        }
+      },
+      "05_Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "04_IServices": "1.0.0",
+          "07_IRepositories": "1.0.0",
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "BCrypt.Net-Next": "4.0.3",
+          "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
+          "Microsoft.AspNetCore.Authorization": "8.0.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
+          "Microsoft.AspNetCore.OpenApi": "7.0.2",
+          "Microsoft.AspNetCore.Razor.Design": "2.2.0",
+          "Microsoft.AspNetCore.SpaServices": "3.1.32",
+          "Microsoft.EntityFrameworkCore": "7.0.14",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14",
+          "Microsoft.Extensions.Configuration": "8.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Configuration.Json": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Hosting": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "Microsoft.Extensions.Logging.Console": "8.0.0",
+          "Microsoft.NETCore.App": "2.2.8",
+          "Newtonsoft.Json": "13.0.3",
+          "NuGet.Core": "2.14.0",
+          "Numind.AspNetCore.SpaServices.Extensions": "1.0.1",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
+          "Selenium.WebDriver": "4.17.0",
+          "Selenium.WebDriver.ChromeDriver": "121.0.6167.8500",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "compile": {
+          "bin/placeholder/05_Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/05_Services.dll": {}
+        }
+      },
+      "06_HostedServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "04_IServices": "1.0.0",
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "BCrypt.Net-Next": "4.0.3",
+          "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
+          "Microsoft.AspNetCore.Authorization": "8.0.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
+          "Microsoft.AspNetCore.OpenApi": "7.0.2",
+          "Microsoft.AspNetCore.Razor.Design": "2.2.0",
+          "Microsoft.AspNetCore.SpaServices": "3.1.32",
+          "Microsoft.EntityFrameworkCore": "7.0.14",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14",
+          "Microsoft.Extensions.Configuration": "8.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Configuration.Json": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Hosting": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "Microsoft.Extensions.Logging.Console": "8.0.0",
+          "Microsoft.NETCore.App": "2.2.8",
+          "Newtonsoft.Json": "13.0.3",
+          "NuGet.Core": "2.14.0",
+          "Numind.AspNetCore.SpaServices.Extensions": "1.0.1",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
+          "Selenium.WebDriver": "4.17.0",
+          "Selenium.WebDriver.ChromeDriver": "121.0.6167.8500",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "compile": {
+          "bin/placeholder/06_HostedServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/06_HostedServices.dll": {}
+        }
+      },
+      "07_IRepositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "02_Models": "1.0.0",
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "BCrypt.Net-Next": "4.0.3",
+          "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
+          "Microsoft.AspNetCore.Authorization": "8.0.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
+          "Microsoft.AspNetCore.OpenApi": "7.0.2",
+          "Microsoft.AspNetCore.Razor.Design": "2.2.0",
+          "Microsoft.AspNetCore.SpaServices": "3.1.32",
+          "Microsoft.EntityFrameworkCore": "7.0.14",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14",
+          "Microsoft.Extensions.Configuration": "8.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Configuration.Json": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Hosting": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "Microsoft.Extensions.Logging.Console": "8.0.0",
+          "Microsoft.NETCore.App": "2.2.8",
+          "Newtonsoft.Json": "13.0.3",
+          "NuGet.Core": "2.14.0",
+          "Numind.AspNetCore.SpaServices.Extensions": "1.0.1",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
+          "Selenium.WebDriver": "4.17.0",
+          "Selenium.WebDriver.ChromeDriver": "121.0.6167.8500",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "compile": {
+          "bin/placeholder/07_IRepositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/07_IRepositories.dll": {}
+        }
+      },
+      "08_Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "02_Models": "1.0.0",
+          "09_Settings": "1.0.0",
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "BCrypt.Net-Next": "4.0.3",
+          "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
+          "Microsoft.AspNetCore.Authorization": "8.0.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
+          "Microsoft.AspNetCore.OpenApi": "7.0.2",
+          "Microsoft.AspNetCore.Razor.Design": "2.2.0",
+          "Microsoft.AspNetCore.SpaServices": "3.1.32",
+          "Microsoft.EntityFrameworkCore": "7.0.14",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14",
+          "Microsoft.Extensions.Configuration": "8.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Configuration.Json": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Hosting": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "Microsoft.Extensions.Logging.Console": "8.0.0",
+          "Microsoft.NETCore.App": "2.2.8",
+          "Newtonsoft.Json": "13.0.3",
+          "NuGet.Core": "2.14.0",
+          "Numind.AspNetCore.SpaServices.Extensions": "1.0.1",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
+          "Selenium.WebDriver": "4.17.0",
+          "Selenium.WebDriver.ChromeDriver": "121.0.6167.8500",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "compile": {
+          "bin/placeholder/08_Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/08_Repositories.dll": {}
+        }
+      },
+      "09_Settings/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "01_Configurations": "1.0.0",
+          "02_Models": "1.0.0",
+          "04_IServices": "1.0.0",
+          "05_Services": "1.0.0",
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "BCrypt.Net-Next": "4.0.3",
+          "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
+          "Microsoft.AspNetCore.Authorization": "8.0.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
+          "Microsoft.AspNetCore.OpenApi": "7.0.2",
+          "Microsoft.AspNetCore.Razor.Design": "2.2.0",
+          "Microsoft.AspNetCore.SpaServices": "3.1.32",
+          "Microsoft.EntityFrameworkCore": "7.0.14",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14",
+          "Microsoft.Extensions.Configuration": "8.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Configuration.Json": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Hosting": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "Microsoft.Extensions.Logging.Console": "8.0.0",
+          "Microsoft.NETCore.App": "2.2.8",
+          "Newtonsoft.Json": "13.0.3",
+          "NuGet.Core": "2.14.0",
+          "Numind.AspNetCore.SpaServices.Extensions": "1.0.1",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
+          "Selenium.WebDriver": "4.17.0",
+          "Selenium.WebDriver.ChromeDriver": "121.0.6167.8500",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "compile": {
+          "bin/placeholder/09_Settings.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/09_Settings.dll": {}
+        }
+      },
+      "10_DIConfiguration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "04_IServices": "1.0.0",
+          "05_Services": "1.0.0",
+          "08_Repositories": "1.0.0",
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "BCrypt.Net-Next": "4.0.3",
+          "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
+          "Microsoft.AspNetCore.Authorization": "8.0.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.2.0",
+          "Microsoft.AspNetCore.OpenApi": "7.0.2",
+          "Microsoft.AspNetCore.Razor.Design": "2.2.0",
+          "Microsoft.AspNetCore.SpaServices": "3.1.32",
+          "Microsoft.EntityFrameworkCore": "7.0.14",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.14",
+          "Microsoft.Extensions.Configuration": "8.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Configuration.Json": "8.0.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Microsoft.Extensions.Hosting": "8.0.0",
+          "Microsoft.Extensions.Logging": "8.0.0",
+          "Microsoft.Extensions.Logging.Console": "8.0.0",
+          "Microsoft.NETCore.App": "2.2.8",
+          "Newtonsoft.Json": "13.0.3",
+          "NuGet.Core": "2.14.0",
+          "Numind.AspNetCore.SpaServices.Extensions": "1.0.1",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
+          "Selenium.WebDriver": "4.17.0",
+          "Selenium.WebDriver.ChromeDriver": "121.0.6167.8500",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "compile": {
+          "bin/placeholder/10_DIConfiguration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/10_DIConfiguration.dll": {}
+        }
       }
     }
   },
@@ -11973,10 +12366,58 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "01_Configurations/1.0.0": {
+      "type": "project",
+      "path": "../01_Configurations/01_Configurations.csproj",
+      "msbuildProject": "../01_Configurations/01_Configurations.csproj"
+    },
+    "02_Models/1.0.0": {
+      "type": "project",
+      "path": "../02_Models/02_Models.csproj",
+      "msbuildProject": "../02_Models/02_Models.csproj"
+    },
+    "04_IServices/1.0.0": {
+      "type": "project",
+      "path": "../04_IServices/04_IServices.csproj",
+      "msbuildProject": "../04_IServices/04_IServices.csproj"
+    },
+    "05_Services/1.0.0": {
+      "type": "project",
+      "path": "../05_Services/05_Services.csproj",
+      "msbuildProject": "../05_Services/05_Services.csproj"
+    },
+    "06_HostedServices/1.0.0": {
+      "type": "project",
+      "path": "../06_HostedServices/06_HostedServices.csproj",
+      "msbuildProject": "../06_HostedServices/06_HostedServices.csproj"
+    },
+    "07_IRepositories/1.0.0": {
+      "type": "project",
+      "path": "../07_IRepositories/07_IRepositories.csproj",
+      "msbuildProject": "../07_IRepositories/07_IRepositories.csproj"
+    },
+    "08_Repositories/1.0.0": {
+      "type": "project",
+      "path": "../08_Repositories/08_Repositories.csproj",
+      "msbuildProject": "../08_Repositories/08_Repositories.csproj"
+    },
+    "09_Settings/1.0.0": {
+      "type": "project",
+      "path": "../09_Settings/09_Settings.csproj",
+      "msbuildProject": "../09_Settings/09_Settings.csproj"
+    },
+    "10_DIConfiguration/1.0.0": {
+      "type": "project",
+      "path": "../10_DIConfiguration/10_DIConfiguration.csproj",
+      "msbuildProject": "../10_DIConfiguration/10_DIConfiguration.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "06_HostedServices >= 1.0.0",
+      "09_Settings >= 1.0.0",
+      "10_DIConfiguration >= 1.0.0",
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "BCrypt.Net-Next >= 4.0.3",
@@ -12035,7 +12476,17 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Florian\\Code\\ProbabilityX\\06_HostedServices\\06_HostedServices.csproj": {
+              "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\06_HostedServices\\06_HostedServices.csproj"
+            },
+            "C:\\Users\\Florian\\Code\\ProbabilityX\\09_Settings\\09_Settings.csproj": {
+              "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\09_Settings\\09_Settings.csproj"
+            },
+            "C:\\Users\\Florian\\Code\\ProbabilityX\\10_DIConfiguration\\10_DIConfiguration.csproj": {
+              "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\10_DIConfiguration\\10_DIConfiguration.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
