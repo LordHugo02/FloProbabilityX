@@ -40,10 +40,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\06_HostedServices\06_HostedServices.csproj" />
     <ProjectReference Include="..\09_Settings\09_Settings.csproj" />
 	<ProjectReference Include="..\10_DIConfiguration\10_DIConfiguration.csproj" />

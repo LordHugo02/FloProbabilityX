@@ -8,18 +8,20 @@ using OpenQA.Selenium.Support.UI;
 using Microsoft.Extensions.Options;
 using Microsoft.CodeAnalysis.Text;
 using System.Xml.Linq;
+using Microsoft.EntityFrameworkCore;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace ProbabilityX_API.Services
 {
     public class EarningCalendarService : IEarningCalendarService
     {
-        private readonly IEarningCalendarRepository _earningcalendarRepository;
         private readonly ICompanyService _companyService;
+        private readonly IEarningCalendarRepository _earningCalendarRepository;
 
-        public EarningCalendarService(IEarningCalendarRepository earningcalendarRepository, ICompanyService companyService)
+        public EarningCalendarService(ICompanyService companyService, IEarningCalendarRepository earningCalendarRepository)
         {
-            _earningcalendarRepository = earningcalendarRepository;
             _companyService = companyService;
+            _earningCalendarRepository = earningCalendarRepository;
         }
 
         public async Task<List<EarningCalendarModel>> ScrapperNextWeekEarningCalendar()
@@ -54,13 +56,10 @@ namespace ProbabilityX_API.Services
                 var companyTags = driver.FindElements(By.CssSelector(".bold.middle"));
                 var epsElements = driver.FindElements(By.CssSelector("[class*='eps_actual']"));
                 var links = driver.FindElements(By.CssSelector("a.bold.middle"));
-                if(companyNames.Count() == links.Count())
-                {
-                    Console.WriteLine("All Good");
-                }
                 foreach (var link in links)
                 {
                     int index = links.IndexOf(link);
+                    Console.WriteLine($"Id : {index} / {links.Count()}");
                     var newCompany = new CompanyModel
                     {
                         CompanyName = companyNames[index].Text,
@@ -68,7 +67,7 @@ namespace ProbabilityX_API.Services
                         Id_StockType = 1 // Remplacez la valeur par l'ID approprié du type de stock
                     };
 
-                    var isCompanyAdded = _companyService.AddCompany(newCompany).Result;
+                    var isCompanyAdded = await _companyService.AddCompany(newCompany);
 
                     var principalHandle = driver.CurrentWindowHandle;
                     if (isCompanyAdded != null)
@@ -90,8 +89,6 @@ namespace ProbabilityX_API.Services
                             // Récupérez la donnée souhaitée ici
                             var fullName = driver.FindElement(By.CssSelector("[itemprop='name']"));
                             var market = driver.FindElement(By.ClassName("btnTextDropDwn"));
-                            string yourData = fullName.Text;
-                            Console.WriteLine($"Donnée récupérée : {yourData}");
                             // Boucle tant que le bouton "Voir plus" est présent
                             while (IsElementVisible(driver, By.CssSelector("#showMoreEarningsHistory")))
                             {
@@ -103,7 +100,6 @@ namespace ProbabilityX_API.Services
                                 Thread.Sleep(1000);
                             }
                             var instrumentEarningsHistory = driver.FindElements(By.CssSelector("tr[name='instrumentEarningsHistory']"));
-                            Console.WriteLine($"Nombre d'historique : {instrumentEarningsHistory.Count()}");
                             foreach (var historyData in instrumentEarningsHistory)
                             {
                                 var tds = historyData.FindElements(By.CssSelector("td"));
@@ -112,15 +108,33 @@ namespace ProbabilityX_API.Services
                                 if (tds.Count == 6)
                                 {
                                     // Récupérer les données de chaque cellule
-                                    var dateOut = tds[0].Text;
-                                    var periodDate = tds[1].Text;
-                                    var bpa = tds[2].Text;
-                                    var bpaPrev = tds[3].Text;
-                                    var performance = tds[4].Text;
-                                    var performancePrev = tds[5].Text;
+                                    var dateOut = tds[0];
+                                    var periodDate = tds[1];
+                                    var bpa = tds[2];
+                                    var bpaPrev = tds[3];
+                                    var performance = tds[4];
+                                    var performancePrev = tds[5];
 
-                                    // Imprimer les données récupérées dans la console
-                                    Console.WriteLine($"Company: {isCompanyAdded.CompanyName} vs RealName: {fullName} Date: {dateOut}, Period Date: {periodDate}, BPA: {bpa}, BPA Previous: {bpaPrev}, Performance: {performance}, Performance Previous: {performancePrev}");
+                                    var periodDateString = periodDate.Text; // Supposons que periodDate.Text contient la chaîne de date
+                                    var dateOutString = dateOut.Text;
+                                    var bpaPrevString = bpaPrev.Text.Replace("/  ", string.Empty);
+                                    var performancePrevString = performancePrev.Text.Replace("/  ", string.Empty);
+                                    // Utilisation de DateTime.Parse (lance une exception en cas d'échec de la conversion)
+                                    DateTime parsedPeriodDate = DateTime.Parse(periodDateString);
+                                    DateTime parsedDateOut = DateTime.Parse(dateOutString);
+                                    var newResult = new EarningCalendarModel
+                                    {
+                                        Id_Company = isCompanyAdded.Id_Company,
+                                        BeneficePerAction = bpa.Text,
+                                        ForecastBeneficePerAction = bpaPrevString,
+                                        Revenue = performance.Text,
+                                        ForecastRevenue = performancePrevString,
+                                        PeriodDate = parsedPeriodDate,
+                                        ResultDate= parsedDateOut,
+
+                                    };
+
+                                    var addingEarningResult = AddEarningCalendarResult(newResult);
                                 }
                                 else
                                 {
@@ -158,6 +172,29 @@ namespace ProbabilityX_API.Services
             return null;
         }
 
+
+        public async Task<EarningCalendarModel> AddEarningCalendarResult(EarningCalendarModel model)
+        {
+
+            var existingResult = await GetEarningCalendarResultByCompanyAndDateOut(model);
+
+            if (existingResult == null)
+            {
+                // L'entreprise n'existe pas encore, vous pouvez l'ajouter
+                return await _earningCalendarRepository.AddEarningCalendarResult(model);
+            }
+            else
+            {
+                // L'entreprise existe déjà, vous pouvez prendre des mesures appropriées
+                Console.WriteLine("L'entreprise existe déjà dans la base de données.");
+                return existingResult; // Indiquer que l'ajout n'a pas été effectué en raison de la duplication
+            }
+        }
+
+        public async Task<EarningCalendarModel> GetEarningCalendarResultByCompanyAndDateOut(EarningCalendarModel model)
+        {
+            return await _earningCalendarRepository.GetEarningCalendarResultByCompanyAndDateOut(model);
+        }
 
 
         // Méthode pour vérifier la visibilité d'un élément (style != 'none')

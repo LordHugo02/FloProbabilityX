@@ -24,13 +24,13 @@ namespace ProbabilityX_API.Configurations
 
 				entity.Property(x => x.BeneficePerAction)
 					.HasColumnName("benefice_per_action")
-					.HasColumnType("FLOAT UNSIGNED");
+                    .HasMaxLength(15);
 
-				entity.Property(x => x.ForecastBeneficePerAction)
+                entity.Property(x => x.ForecastBeneficePerAction)
 					.HasColumnName("forecast_benefice_per_action")
-					.HasColumnType("FLOAT UNSIGNED");
+                    .HasMaxLength(15);
 
-				entity.Property(x => x.Revenue)
+                entity.Property(x => x.Revenue)
 					.HasColumnName("revenue")
 					.HasMaxLength(15); // Ajustez la taille selon vos besoins
 
@@ -40,6 +40,11 @@ namespace ProbabilityX_API.Configurations
 
 				entity.Property(x => x.ResultDate)
 					.HasColumnName("result_date")
+					.HasColumnType("DATE")
+					.IsRequired();
+				
+				entity.Property(x => x.PeriodDate)
+					.HasColumnName("period_date")
 					.HasColumnType("DATE")
 					.IsRequired();
 

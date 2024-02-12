@@ -32,14 +32,13 @@ CREATE TABLE IF NOT EXISTS `ban` (
 -- Listage de la structure de table probabilityx_db. company
 CREATE TABLE IF NOT EXISTS `company` (
   `id_company` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `company_name` varchar(255) NOT NULL,
+  `company_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `stock_symbol` varchar(10) NOT NULL,
   `id_stock_type` int(11) unsigned NOT NULL,
   PRIMARY KEY (`id_company`),
   KEY `fk_company_stock_type` (`id_stock_type`),
-  CONSTRAINT `fk_company_favorite_company` FOREIGN KEY (`id_company`) REFERENCES `favorites_company` (`id_company`),
   CONSTRAINT `fk_company_stock_type` FOREIGN KEY (`id_stock_type`) REFERENCES `stock_type` (`id_stock_type`)
-) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
 -- Listage des données de la table probabilityx_db.company : ~0 rows (environ)
 
@@ -63,16 +62,17 @@ CREATE TABLE IF NOT EXISTS `day_stock_price` (
 CREATE TABLE IF NOT EXISTS `earnings_calendar` (
   `id_earning` int(10) unsigned zerofill NOT NULL AUTO_INCREMENT,
   `id_company` int(10) unsigned NOT NULL,
-  `benefice_per_action` float unsigned DEFAULT NULL,
-  `forecast_benefice_per_action` float unsigned DEFAULT NULL,
+  `benefice_per_action` varchar(15) DEFAULT NULL,
+  `forecast_benefice_per_action` varchar(15) DEFAULT NULL,
   `revenue` varchar(15) DEFAULT NULL,
   `forecast_revenue` varchar(15) DEFAULT NULL,
-  `result_date` date DEFAULT NULL,
+  `result_date` date NOT NULL,
   `result_time` time DEFAULT NULL,
+  `period_date` date NOT NULL,
   PRIMARY KEY (`id_earning`),
   KEY `FK_earnings_calendar_company` (`id_company`),
   CONSTRAINT `FK_earnings_calendar_company` FOREIGN KEY (`id_company`) REFERENCES `company` (`id_company`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=487 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- Listage des données de la table probabilityx_db.earnings_calendar : ~0 rows (environ)
 
@@ -215,9 +215,11 @@ CREATE TABLE IF NOT EXISTS `stock_type` (
   `id_stock_type` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name_stock_type` varchar(255) NOT NULL,
   PRIMARY KEY (`id_stock_type`)
-) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
 
--- Listage des données de la table probabilityx_db.stock_type : ~0 rows (environ)
+-- Listage des données de la table probabilityx_db.stock_type : ~1 rows (environ)
+INSERT INTO `stock_type` (`id_stock_type`, `name_stock_type`) VALUES
+	(1, 'action');
 
 -- Listage de la structure de table probabilityx_db. user
 CREATE TABLE IF NOT EXISTS `user` (

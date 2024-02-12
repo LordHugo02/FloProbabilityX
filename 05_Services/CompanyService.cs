@@ -45,7 +45,7 @@ namespace ProbabilityX_API.Services
                 // L'entreprise existe déjà, vous pouvez prendre des mesures appropriées
                 Console.WriteLine("L'entreprise existe déjà dans la base de données.");
                 // Vous pouvez choisir de ne pas ajouter la nouvelle entreprise ou prendre d'autres mesures nécessaires
-                return null; // Indiquer que l'ajout n'a pas été effectué en raison de la duplication
+                return existingCompany; // Indiquer que l'ajout n'a pas été effectué en raison de la duplication
             }
         }
 
