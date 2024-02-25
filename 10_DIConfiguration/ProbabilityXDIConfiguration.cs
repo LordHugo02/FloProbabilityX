@@ -17,6 +17,9 @@ public static class ProbabilityXDIConfiguration
         
         services.AddScoped<IEarningCalendarService, EarningCalendarService>();
         services.AddScoped<IEarningCalendarRepository, EarningCalendarRepository>();
+        
+        services.AddScoped<IRelativeStrengthIndexService, RelativeStrengthIndexService>();
+        //services.AddScoped<IEarningCalendarRepository, EarningCalendarRepository>();
 
         // Ajoute d'autres injections de dépendances au besoin
     }
