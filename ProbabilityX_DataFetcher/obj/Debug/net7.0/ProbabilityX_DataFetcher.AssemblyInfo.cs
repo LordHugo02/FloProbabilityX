@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProbabilityX_DataFetcher")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1669066f913f46f218821635bbb55bd9f7f9753")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProbabilityX_DataFetcher")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProbabilityX_DataFetcher")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

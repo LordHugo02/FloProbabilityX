@@ -1,21 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Florian\\Code\\ProbabilityX\\ProbabilityX_API\\ProbabilityX_API.csproj": {}
+    "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\ProbabilityX_API\\ProbabilityX_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Florian\\Code\\ProbabilityX\\01_Configurations\\01_Configurations.csproj": {
+    "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\01_Configurations\\01_Configurations.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Florian\\Code\\ProbabilityX\\01_Configurations\\01_Configurations.csproj",
+        "projectUniqueName": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\01_Configurations\\01_Configurations.csproj",
         "projectName": "01_Configurations",
-        "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\01_Configurations\\01_Configurations.csproj",
-        "packagesPath": "C:\\Users\\Florian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\01_Configurations\\obj\\",
+        "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\01_Configurations\\01_Configurations.csproj",
+        "packagesPath": "C:\\Users\\florian.lejosne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\01_Configurations\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Florian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\florian.lejosne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -28,8 +35,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\02_Models\\02_Models.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\02_Models\\02_Models.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\02_Models\\02_Models.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\02_Models\\02_Models.csproj"
               }
             }
           }
@@ -176,27 +183,48 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Florian\\Code\\ProbabilityX\\02_Models\\02_Models.csproj": {
+    "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\02_Models\\02_Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Florian\\Code\\ProbabilityX\\02_Models\\02_Models.csproj",
+        "projectUniqueName": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\02_Models\\02_Models.csproj",
         "projectName": "02_Models",
-        "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\02_Models\\02_Models.csproj",
-        "packagesPath": "C:\\Users\\Florian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\02_Models\\obj\\",
+        "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\02_Models\\02_Models.csproj",
+        "packagesPath": "C:\\Users\\florian.lejosne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\02_Models\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Florian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\florian.lejosne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -353,27 +381,48 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Florian\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj": {
+    "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Florian\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj",
+        "projectUniqueName": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj",
         "projectName": "04_IServices",
-        "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj",
-        "packagesPath": "C:\\Users\\Florian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\04_IServices\\obj\\",
+        "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj",
+        "packagesPath": "C:\\Users\\florian.lejosne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\04_IServices\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Florian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\florian.lejosne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -386,8 +435,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\02_Models\\02_Models.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\02_Models\\02_Models.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\02_Models\\02_Models.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\02_Models\\02_Models.csproj"
               }
             }
           }
@@ -534,27 +583,48 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Florian\\Code\\ProbabilityX\\05_Services\\05_Services.csproj": {
+    "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\05_Services\\05_Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Florian\\Code\\ProbabilityX\\05_Services\\05_Services.csproj",
+        "projectUniqueName": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\05_Services\\05_Services.csproj",
         "projectName": "05_Services",
-        "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\05_Services\\05_Services.csproj",
-        "packagesPath": "C:\\Users\\Florian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\05_Services\\obj\\",
+        "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\05_Services\\05_Services.csproj",
+        "packagesPath": "C:\\Users\\florian.lejosne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\05_Services\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Florian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\florian.lejosne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -567,11 +637,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj"
               },
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\07_IRepositories\\07_IRepositories.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\07_IRepositories\\07_IRepositories.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\07_IRepositories\\07_IRepositories.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\07_IRepositories\\07_IRepositories.csproj"
               }
             }
           }
@@ -718,27 +788,48 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Florian\\Code\\ProbabilityX\\06_HostedServices\\06_HostedServices.csproj": {
+    "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\06_HostedServices\\06_HostedServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Florian\\Code\\ProbabilityX\\06_HostedServices\\06_HostedServices.csproj",
+        "projectUniqueName": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\06_HostedServices\\06_HostedServices.csproj",
         "projectName": "06_HostedServices",
-        "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\06_HostedServices\\06_HostedServices.csproj",
-        "packagesPath": "C:\\Users\\Florian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\06_HostedServices\\obj\\",
+        "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\06_HostedServices\\06_HostedServices.csproj",
+        "packagesPath": "C:\\Users\\florian.lejosne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\06_HostedServices\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Florian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\florian.lejosne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -751,8 +842,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj"
               }
             }
           }
@@ -899,27 +990,48 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Florian\\Code\\ProbabilityX\\07_IRepositories\\07_IRepositories.csproj": {
+    "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\07_IRepositories\\07_IRepositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Florian\\Code\\ProbabilityX\\07_IRepositories\\07_IRepositories.csproj",
+        "projectUniqueName": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\07_IRepositories\\07_IRepositories.csproj",
         "projectName": "07_IRepositories",
-        "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\07_IRepositories\\07_IRepositories.csproj",
-        "packagesPath": "C:\\Users\\Florian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\07_IRepositories\\obj\\",
+        "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\07_IRepositories\\07_IRepositories.csproj",
+        "packagesPath": "C:\\Users\\florian.lejosne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\07_IRepositories\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Florian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\florian.lejosne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -932,8 +1044,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\02_Models\\02_Models.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\02_Models\\02_Models.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\02_Models\\02_Models.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\02_Models\\02_Models.csproj"
               }
             }
           }
@@ -1080,27 +1192,48 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Florian\\Code\\ProbabilityX\\08_Repositories\\08_Repositories.csproj": {
+    "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\08_Repositories\\08_Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Florian\\Code\\ProbabilityX\\08_Repositories\\08_Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\08_Repositories\\08_Repositories.csproj",
         "projectName": "08_Repositories",
-        "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\08_Repositories\\08_Repositories.csproj",
-        "packagesPath": "C:\\Users\\Florian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\08_Repositories\\obj\\",
+        "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\08_Repositories\\08_Repositories.csproj",
+        "packagesPath": "C:\\Users\\florian.lejosne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\08_Repositories\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Florian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\florian.lejosne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -1113,11 +1246,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\02_Models\\02_Models.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\02_Models\\02_Models.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\02_Models\\02_Models.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\02_Models\\02_Models.csproj"
               },
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\09_Settings\\09_Settings.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\09_Settings\\09_Settings.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\09_Settings\\09_Settings.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\09_Settings\\09_Settings.csproj"
               }
             }
           }
@@ -1264,27 +1397,48 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Florian\\Code\\ProbabilityX\\09_Settings\\09_Settings.csproj": {
+    "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\09_Settings\\09_Settings.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Florian\\Code\\ProbabilityX\\09_Settings\\09_Settings.csproj",
+        "projectUniqueName": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\09_Settings\\09_Settings.csproj",
         "projectName": "09_Settings",
-        "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\09_Settings\\09_Settings.csproj",
-        "packagesPath": "C:\\Users\\Florian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\09_Settings\\obj\\",
+        "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\09_Settings\\09_Settings.csproj",
+        "packagesPath": "C:\\Users\\florian.lejosne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\09_Settings\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Florian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\florian.lejosne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -1297,17 +1451,17 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\01_Configurations\\01_Configurations.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\01_Configurations\\01_Configurations.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\01_Configurations\\01_Configurations.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\01_Configurations\\01_Configurations.csproj"
               },
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\02_Models\\02_Models.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\02_Models\\02_Models.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\02_Models\\02_Models.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\02_Models\\02_Models.csproj"
               },
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj"
               },
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\05_Services\\05_Services.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\05_Services\\05_Services.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\05_Services\\05_Services.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\05_Services\\05_Services.csproj"
               }
             }
           }
@@ -1454,27 +1608,48 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Florian\\Code\\ProbabilityX\\10_DIConfiguration\\10_DIConfiguration.csproj": {
+    "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\10_DIConfiguration\\10_DIConfiguration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Florian\\Code\\ProbabilityX\\10_DIConfiguration\\10_DIConfiguration.csproj",
+        "projectUniqueName": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\10_DIConfiguration\\10_DIConfiguration.csproj",
         "projectName": "10_DIConfiguration",
-        "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\10_DIConfiguration\\10_DIConfiguration.csproj",
-        "packagesPath": "C:\\Users\\Florian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\10_DIConfiguration\\obj\\",
+        "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\10_DIConfiguration\\10_DIConfiguration.csproj",
+        "packagesPath": "C:\\Users\\florian.lejosne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\10_DIConfiguration\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Florian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\florian.lejosne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -1487,14 +1662,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\04_IServices\\04_IServices.csproj"
               },
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\05_Services\\05_Services.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\05_Services\\05_Services.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\05_Services\\05_Services.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\05_Services\\05_Services.csproj"
               },
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\08_Repositories\\08_Repositories.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\08_Repositories\\08_Repositories.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\08_Repositories\\08_Repositories.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\08_Repositories\\08_Repositories.csproj"
               }
             }
           }
@@ -1641,27 +1816,48 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Florian\\Code\\ProbabilityX\\ProbabilityX_API\\ProbabilityX_API.csproj": {
+    "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\ProbabilityX_API\\ProbabilityX_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Florian\\Code\\ProbabilityX\\ProbabilityX_API\\ProbabilityX_API.csproj",
+        "projectUniqueName": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\ProbabilityX_API\\ProbabilityX_API.csproj",
         "projectName": "ProbabilityX_API",
-        "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\ProbabilityX_API\\ProbabilityX_API.csproj",
-        "packagesPath": "C:\\Users\\Florian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\ProbabilityX_API\\obj\\",
+        "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\ProbabilityX_API\\ProbabilityX_API.csproj",
+        "packagesPath": "C:\\Users\\florian.lejosne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\ProbabilityX_API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Florian\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\florian.lejosne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -1674,14 +1870,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\06_HostedServices\\06_HostedServices.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\06_HostedServices\\06_HostedServices.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\06_HostedServices\\06_HostedServices.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\06_HostedServices\\06_HostedServices.csproj"
               },
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\09_Settings\\09_Settings.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\09_Settings\\09_Settings.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\09_Settings\\09_Settings.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\09_Settings\\09_Settings.csproj"
               },
-              "C:\\Users\\Florian\\Code\\ProbabilityX\\10_DIConfiguration\\10_DIConfiguration.csproj": {
-                "projectPath": "C:\\Users\\Florian\\Code\\ProbabilityX\\10_DIConfiguration\\10_DIConfiguration.csproj"
+              "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\10_DIConfiguration\\10_DIConfiguration.csproj": {
+                "projectPath": "C:\\Users\\florian.lejosne\\Code\\ProbabilityX\\10_DIConfiguration\\10_DIConfiguration.csproj"
               }
             }
           }
@@ -1828,6 +2024,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -1836,7 +2050,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

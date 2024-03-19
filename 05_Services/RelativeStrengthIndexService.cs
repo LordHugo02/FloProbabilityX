@@ -10,6 +10,7 @@ using Microsoft.CodeAnalysis.Text;
 using System.Xml.Linq;
 using Microsoft.EntityFrameworkCore;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using System.Text.RegularExpressions;
 
 namespace ProbabilityX_API.Services
 {
@@ -25,30 +26,36 @@ namespace ProbabilityX_API.Services
             //chromeOptions.AddArgument("--headless"); // Run Chrome in headless mode (without UI)
             chromeOptions.AddArguments("--ignore-certificate-errors");
             var driver = new ChromeDriver(chromeOptions);
+            string apiUrl = "https://api.taapi.io/rsi";
+            string secret = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbHVlIjoiNjVmODFlNzUyYzczYzFlM2ZkOWRkZjRhIiwiaWF0IjoxNzEwNzU5NTQxLCJleHAiOjMzMjE1MjIzNTQxfQ.WiJfUmxx45GN_xLRrtSJmXfGrljav5cCrrF8mfpSeQw";
+            string exchange = "binance";
+            string symbol = "BTC/USDT";
+            string interval = "4h";
+            int backtrack = 1;
+
+            string requestUrl = $"{apiUrl}?secret={secret}&exchange={exchange}&symbol={symbol}&interval={interval}&backtrack={backtrack}";
 
             try
             {
                 // Navigate to the investing.com website
-                driver.Navigate().GoToUrl("https://www.etoro.com/markets/nsdq100/chart/");
-                IWebElement chartIndicator = driver.FindElement(By.ClassName("indicators-control"));
-                // Cliquer sur l'élément
-                await Task.Delay(2000);
+                driver.Navigate().GoToUrl(requestUrl);
+                string htmlSource = driver.PageSource;
 
-                chartIndicator.Click();
-                await Task.Delay(5000);
-                IWebElement dialog = driver.FindElement(By.CssSelector("body > .dialog"));
+                // Use regex to extract the value from the HTML source
+                Regex regex = new Regex("\"value\":(\\d+\\.\\d+)");
+                Match match = regex.Match(htmlSource);
 
-                var inputField = driver.FindElements(By.ClassName("dialog"));
-                Console.WriteLine(inputField.Count());
-                Console.WriteLine(dialog);
+                if (match.Success)
+                {
+                    string value = match.Groups[1].Value;
+                    Console.WriteLine("Value: " + value);
+                }
+                else
+                {
+                    Console.WriteLine("Value not found in HTML source.");
+                };
 
 
-                // Utiliser JavaScript pour mettre en focus sur le champ d'entrée
-                //IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-                //js.ExecuteScript("arguments[0].focus();", inputField);
-                // Cliquer sur le champ d'entrée
-                //inputField.SendKeys("RSI");
-                await Task.Delay(2000);
             }
             catch (Exception ex)
             {
