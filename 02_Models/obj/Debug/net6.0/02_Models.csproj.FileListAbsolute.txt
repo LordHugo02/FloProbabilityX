@@ -1,0 +1,15 @@
+C:\Users\Florian\Code\ProbabilityX\02_Models\bin\Debug\net6.0\selenium-manager\linux\selenium-manager
+C:\Users\Florian\Code\ProbabilityX\02_Models\bin\Debug\net6.0\selenium-manager\macos\selenium-manager
+C:\Users\Florian\Code\ProbabilityX\02_Models\bin\Debug\net6.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\Florian\Code\ProbabilityX\02_Models\bin\Debug\net6.0\02_Models.deps.json
+C:\Users\Florian\Code\ProbabilityX\02_Models\bin\Debug\net6.0\02_Models.dll
+C:\Users\Florian\Code\ProbabilityX\02_Models\bin\Debug\net6.0\02_Models.pdb
+C:\Users\Florian\Code\ProbabilityX\02_Models\obj\Debug\net6.0\02_Models.csproj.AssemblyReference.cache
+C:\Users\Florian\Code\ProbabilityX\02_Models\obj\Debug\net6.0\02_Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Florian\Code\ProbabilityX\02_Models\obj\Debug\net6.0\02_Models.AssemblyInfoInputs.cache
+C:\Users\Florian\Code\ProbabilityX\02_Models\obj\Debug\net6.0\02_Models.AssemblyInfo.cs
+C:\Users\Florian\Code\ProbabilityX\02_Models\obj\Debug\net6.0\02_Models.csproj.CoreCompileInputs.cache
+C:\Users\Florian\Code\ProbabilityX\02_Models\obj\Debug\net6.0\02_Models.dll
+C:\Users\Florian\Code\ProbabilityX\02_Models\obj\Debug\net6.0\refint\02_Models.dll
+C:\Users\Florian\Code\ProbabilityX\02_Models\obj\Debug\net6.0\02_Models.pdb
+C:\Users\Florian\Code\ProbabilityX\02_Models\obj\Debug\net6.0\ref\02_Models.dll
