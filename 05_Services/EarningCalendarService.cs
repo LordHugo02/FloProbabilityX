@@ -30,11 +30,12 @@ namespace ProbabilityX_API.Services
             //chromeOptions.AddArgument("--headless"); // Run Chrome in headless mode (without UI)
             chromeOptions.AddArguments("--ignore-certificate-errors");
             var driver = new ChromeDriver(chromeOptions);
+            string apiUrl = "https://fr.investing.com/earnings-calendar/";
 
             try
             {
                 // Navigate to the investing.com website
-                driver.Navigate().GoToUrl("");
+                driver.Navigate().GoToUrl(apiUrl);
                 await Task.Delay(2000);
                 var acceptButtonCookie = driver.FindElement(By.Id("onetrust-accept-btn-handler"));
                 acceptButtonCookie.Click();
@@ -58,7 +59,6 @@ namespace ProbabilityX_API.Services
                 foreach (var link in links)
                 {
                     int index = links.IndexOf(link);
-                    Console.WriteLine($"Id : {index} / {links.Count()}");
                     var newCompany = new CompanyModel
                     {
                         CompanyName = companyNames[index].Text,
@@ -86,7 +86,7 @@ namespace ProbabilityX_API.Services
                         try
                         {
                             // Récupérez la donnée souhaitée ici
-                            var fullName = driver.FindElement(By.CssSelector("[itemprop='name']"));
+                            // var fullName = driver.FindElement(By.CssSelector("[itemprop='name']"));
                             var market = driver.FindElement(By.ClassName("btnTextDropDwn"));
                             // Boucle tant que le bouton "Voir plus" est présent
                             while (IsElementVisible(driver, By.CssSelector("#showMoreEarningsHistory")))

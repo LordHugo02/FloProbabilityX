@@ -16,6 +16,6 @@ namespace ProbabilityX_API.Models
         public TimeSpan? ResultTime { get; set; }
 
         // Navigation property for the foreign key relationship
-        public CompanyModel Company { get; set; }
+        public CompanyModel Company { get; set; } = null!;
     }
 }
