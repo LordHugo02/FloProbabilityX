@@ -34,7 +34,7 @@ namespace ProbabilityX_API.Services
             try
             {
                 // Navigate to the investing.com website
-                driver.Navigate().GoToUrl("https://fr.investing.com/earnings-calendar/");
+                driver.Navigate().GoToUrl("");
                 await Task.Delay(2000);
                 var acceptButtonCookie = driver.FindElement(By.Id("onetrust-accept-btn-handler"));
                 acceptButtonCookie.Click();
