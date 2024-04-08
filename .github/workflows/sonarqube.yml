@@ -42,10 +42,6 @@ jobs:
           New-Item -Path .\.sonar\scanner -ItemType Directory
           dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
 
-      - name: Begin SonarQube analysis
-        shell: powershell
-        run: .\.sonar\scanner\dotnet-sonarscanner begin /k:"yogStock-app" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
-    
       - name: Build project
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"yogStock-app" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
