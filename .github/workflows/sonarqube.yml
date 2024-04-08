@@ -48,12 +48,6 @@ jobs:
     
       - name: Build project
         run: |
-          cd ProbabilityX_API
-          dotnet build
-
-      - name: Result
-        run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"FloProbabilityX" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
+          dotnet build ProbabilityX_API/ProbabilityX_API.sln
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
-
-
