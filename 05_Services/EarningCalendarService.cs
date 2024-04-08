@@ -54,7 +54,6 @@ namespace ProbabilityX_API.Services
                 }
                 var companyNames = driver.FindElements(By.ClassName("earnCalCompanyName"));
                 var companyTags = driver.FindElements(By.CssSelector(".bold.middle"));
-                var epsElements = driver.FindElements(By.CssSelector("[class*='eps_actual']"));
                 var links = driver.FindElements(By.CssSelector("a.bold.middle"));
                 foreach (var link in links)
                 {
