@@ -48,10 +48,7 @@ jobs:
 
       - name: Build project
         run: |
-          cd ProbabilityX_API  # Navigate to the directory containing the solution file
-          dotnet build ProbabilityX_API.sln
-
-      - name: End SonarQube analysis
-        shell: powershell
-        run: |
-          & "C:\Program Files\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe" .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+          cd ProbabilityX_API
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"dsfsd" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
+          dotnet build
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
