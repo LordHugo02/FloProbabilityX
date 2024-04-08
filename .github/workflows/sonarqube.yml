@@ -47,4 +47,4 @@ jobs:
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"yogStock-app" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
           dotnet build ProbabilityX_API/ProbabilityX_API.sln
           dotnet test ProbabilityX_API/ProbabilityX_API.sln --collect:"XPlat Code Coverage"
-          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.coverageReportPaths="**/*.coverage"
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
