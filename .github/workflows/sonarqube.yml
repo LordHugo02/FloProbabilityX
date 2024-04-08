@@ -47,7 +47,9 @@ jobs:
         run: .\.sonar\scanner\dotnet-sonarscanner begin /k:"yogStock-app" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
 
       - name: Build project
-        run: dotnet build
+        run: |
+          cd ProbabilityX_API  # Navigate to the directory containing the solution file
+          dotnet build ProbabilityX_API.sln
 
       - name: End SonarQube analysis
         shell: powershell
